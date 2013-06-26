@@ -47,22 +47,27 @@
       });
     };
 
-    $("#menu").mousemove(function(e) {
-      var x = e.pageX - this.offsetLeft,
-          y = e.pageY - this.offsetTop,
-          rotateX = - rotation * ((height - y) - (height / 2)) / (height / 2),
-          rotateY = rotation * ((width - x) - (width / 2)) / (width / 2)
-          ;
-      setRotation(rotateX, rotateY);      
-      // console.log(width, height);
-    });
-    window.ondeviceorientation = function(event) {
-      alpha = Math.round(event.alpha);
-      beta = Math.round(event.beta);
-      gamma = Math.round(event.gamma);
-      // $("#debug").text("x" + alpha + " y" + beta + " z" + gamma);
-      setRotation(beta - 30, - gamma);
-    };
+    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
+      window.ondeviceorientation = function(event) {
+        var alpha = Math.round(event.alpha),
+            beta = Math.round(event.beta),
+            gamma = Math.round(event.gamma);
+
+        // $("#debug").text("x" + alpha + " y" + beta + " z" + gamma);
+        setRotation(beta - 30, - gamma);
+      };
+    }
+    else {
+      $("#menu").mousemove(function(e) {
+        var x = e.pageX - this.offsetLeft,
+            y = e.pageY - this.offsetTop,
+            rotateX = - rotation * ((height - y) - (height / 2)) / (height / 2),
+            rotateY = rotation * ((width - x) - (width / 2)) / (width / 2)
+            ;
+        setRotation(rotateX, rotateY);      
+        // console.log(width, height);
+      });      
+    }
   });
 </script>
 
