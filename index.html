@@ -5,7 +5,7 @@
 <title>KATOKAMI</title>
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-
+<meta name="viewport" content="width=device-width, initial-scale=0.5">
 <style type="text/css">
 
   body, html {
@@ -39,20 +39,34 @@
 
   $(function() {
     var $inner = $("#menu .inner");
+
+    var setRotation = function(rotateX, rotateY) {
+      $inner.css({
+        transform: "rotateX(" + rotateX + "deg) rotateY(" + rotateY + "deg)",
+        webkitTransform: "rotateX(" + rotateX + "deg) rotateY(" + rotateY + "deg)"
+      });
+    };
+
     $("#menu").mousemove(function(e) {
       var x = e.pageX - this.offsetLeft,
           y = e.pageY - this.offsetTop,
           rotateX = - rotation * ((height - y) - (height / 2)) / (height / 2),
           rotateY = rotation * ((width - x) - (width / 2)) / (width / 2)
           ;
-      
-      $inner.css({
-        webkitTransform: "rotateX(" + rotateX + "deg) rotateY(" + rotateY + "deg)"
-      });
+      setRotation(rotateX, rotateY);      
       // console.log(width, height);
     });
+    window.ondeviceorientation = function(event) {
+      alpha = Math.round(event.alpha);
+      beta = Math.round(event.beta);
+      gamma = Math.round(event.gamma);
+      // $("#debug").text("x" + alpha + " y" + beta + " z" + gamma);
+      setRotation(beta - 30, - gamma);
+    };
   });
 </script>
 
+
+<div id="debug"></div>
 <div id="menu"><div class="inner"><img src="./menu.png" alt="" /></div></div>
 
