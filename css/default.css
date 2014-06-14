@@ -46,6 +46,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block; }
 
 *, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
 body {
@@ -89,7 +91,28 @@ h1#katokami {
   -o-background-size: cover;
   -webkit-background-size: cover;
   background-size: cover;
-  background-position: center; }
+  background-position: center;
+  margin-bottom: 1rem; }
+
+#main-nav {
+  background: #fff;
+  top: 0px;
+  position: -webkit-sticky;
+  position: -moz-sticky;
+  position: -ms-sticky;
+  position: -o-sticky;
+  position: sticky;
+  z-index: 10000;
+  text-align: center; }
+  #main-nav li {
+    display: inline-block; }
+  #main-nav a {
+    background: none;
+    color: black;
+    text-transform: uppercase;
+    display: inline-block;
+    line-height: 2em;
+    padding: 0 1em; }
 
 p#intro {
   font-size: 1.4rem;

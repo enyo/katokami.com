@@ -5,7 +5,7 @@
 
 // Defining the box sizing for all elemens
 *, *:before, *:after {
-  box-sizing: border-box;
+  @include box-sizing(border-box);
 }
 
 

@@ -24,7 +24,42 @@ h1#katokami {
 
   @include background-size(cover);
   background-position: center;
+  margin-bottom: 1rem;
 }
+
+
+
+
+// Navigation
+#main-nav {
+  background: #fff;
+  top: 0px;
+  position: -webkit-sticky;
+  position: -moz-sticky;
+  position: -ms-sticky;
+  position: -o-sticky;
+  position: sticky;
+
+  z-index: 10000;
+
+  text-align: center;
+
+  li {
+    display: inline-block;
+  }
+
+  a {
+    background: none;
+    color: black;
+    text-transform: uppercase;
+    display: inline-block;
+    line-height: 2em;
+    padding: 0 1em;
+  }
+
+}
+
+
 
 
 
