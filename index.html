@@ -49,17 +49,10 @@
 
 <section id="kits">
 
-  <!-- The files are in _includes/ -->
-  {% include kit-pot-flower-purple.html %}
-
-  {% include kit-pot-flower-red.html %}
-
-  {% include kit-cctv-camera.html %}
-
-  {% include kit-zapper-orange.html %}
-
-  {% include kit-zapper-gray.html %}
-
+  <!-- The files are in _posts/ -->
+  {% for post in site.posts %}{% if post.invisible != true %}
+    {{ post.content }}
+  {% endif %}{% endfor %}
 
 </section>
 
