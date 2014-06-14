@@ -48,6 +48,15 @@ h1#katokami {
     display: inline-block;
   }
 
+  li.social {
+    a {
+      padding: 0.0.5em;
+    }
+    &.facebook {
+      padding-left: 2em;
+    }
+  }
+
   a {
     background: none;
     color: black;
@@ -55,6 +64,19 @@ h1#katokami {
     display: inline-block;
     line-height: 2em;
     padding: 0 1em;
+    
+    span {
+      display: none;
+    }
+  }
+
+  i {
+    position: relative;
+    top: 2px;
+    color: #808080;
+    font-size: 2rem;
+    line-height: 1.5rem;
+    vertical-align: middle;
   }
 
 }
