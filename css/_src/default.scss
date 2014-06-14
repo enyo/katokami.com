@@ -226,6 +226,7 @@ p#intro {
   }
   
   section {
+    position: relative;
     .text {
       padding: 3rem;
       width: 50%;
@@ -239,30 +240,71 @@ p#intro {
     &:after {
       content: "";
       width: 50%;
-      padding-bottom: 50%;
       background: #ddd;
       @include background-size(cover);
+      background-position: center;
     }
     @include clearfix;
-    
+
     &:nth-child(even) {
       .text {
         float: left;
-      }
-      &:after {
-        float: right;
       }
     }
     &:nth-child(odd) {
       .text {
         float: right;
       }
+    }
+
+  }
+}
+
+@media (min-width: 1266px) {
+  #about, #help {
+    section {
       &:after {
-        float: left;
+        padding-bottom: 50%;
+      }
+      &:nth-child(even) {
+        &:after {
+          float: right;
+        }
+      }
+      &:nth-child(odd) {
+        &:after {
+          float: left;
+        }
       }
     }
   }
 }
+
+@media (max-width: 1266px) {
+  #about, #help {
+    section {
+      &:nth-child(even) {
+        &:after {
+          position: absolute;
+          right: 0;
+          top: 0;
+          left: 50%;
+          bottom: 0;
+        }
+      }
+      &:nth-child(odd) {
+        &:after {
+          position: absolute;
+          left: 0;
+          top: 0;
+          right: 50%;
+          bottom: 0;
+        }
+      }
+    }
+  }
+}
+
 
 
 // About

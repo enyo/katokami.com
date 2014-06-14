@@ -207,6 +207,7 @@ p#intro {
         display: block;
         width: 100%; }
   #about section, #help section {
+    position: relative;
     overflow: hidden;
     *zoom: 1; }
     #about section .text, #help section .text {
@@ -219,21 +220,37 @@ p#intro {
     #about section:after, #help section:after {
       content: "";
       width: 50%;
-      padding-bottom: 50%;
       background: #ddd;
       -moz-background-size: cover;
       -o-background-size: cover;
       -webkit-background-size: cover;
-      background-size: cover; }
+      background-size: cover;
+      background-position: center; }
     #about section:nth-child(even) .text, #help section:nth-child(even) .text {
       float: left; }
-    #about section:nth-child(even):after, #help section:nth-child(even):after {
-      float: right; }
     #about section:nth-child(odd) .text, #help section:nth-child(odd) .text {
       float: right; }
-    #about section:nth-child(odd):after, #help section:nth-child(odd):after {
-      float: left; }
 
+@media (min-width: 1266px) {
+  #about section:after, #help section:after {
+    padding-bottom: 50%; }
+  #about section:nth-child(even):after, #help section:nth-child(even):after {
+    float: right; }
+  #about section:nth-child(odd):after, #help section:nth-child(odd):after {
+    float: left; } }
+@media (max-width: 1266px) {
+  #about section:nth-child(even):after, #help section:nth-child(even):after {
+    position: absolute;
+    right: 0;
+    top: 0;
+    left: 50%;
+    bottom: 0; }
+  #about section:nth-child(odd):after, #help section:nth-child(odd):after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 50%;
+    bottom: 0; } }
 #about {
   margin-top: 6rem; }
   #about .about-katokami:after {
