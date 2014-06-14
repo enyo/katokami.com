@@ -1,0 +1,61 @@
+//
+// General definitions
+//
+
+
+// Defining the box sizing for all elemens
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+
+// The base settings that will be inherited by
+// most elements
+body {
+  padding: 0;
+  background: #EAE8E7;
+  color: #000;
+  font-family: 'Muli', sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.5em;
+
+
+  > * {
+    // All elements at the top level have
+    // a horizontal padding so they have a
+    // nice spacing to the window border.
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+
+
+
+
+// Headers
+h1 {
+  font-size: 1.4rem;
+  line-height: 1.5em;
+  text-transform: uppercase;
+}
+
+
+
+
+// Links
+a {
+  display: inline-block;
+  text-decoration: none;
+  background: black;
+  color: white;
+  padding: 0 0.4em;
+}
+
+
+// Paragraphs
+p {
+  margin: 1.5rem 0;
+}
+

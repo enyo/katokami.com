@@ -1,0 +1,160 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline; }
+
+html {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle; }
+
+q, blockquote {
+  quotes: none; }
+  q:before, q:after, blockquote:before, blockquote:after {
+    content: "";
+    content: none; }
+
+a img {
+  border: none; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block; }
+
+*, *:before, *:after {
+  box-sizing: border-box; }
+
+body {
+  padding: 0;
+  background: #EAE8E7;
+  color: #000;
+  font-family: 'Muli', sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.5em; }
+  body > * {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem; }
+
+h1 {
+  font-size: 1.4rem;
+  line-height: 1.5em;
+  text-transform: uppercase; }
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  background: black;
+  color: white;
+  padding: 0 0.4em; }
+
+p {
+  margin: 1.5rem 0; }
+
+h1#katokami {
+  text-indent: -119988px;
+  overflow: hidden;
+  text-align: left;
+  text-transform: capitalize;
+  background-image: url('/image/header.jpg?1402750760');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  height: 40rem;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center; }
+
+p#intro {
+  font-size: 1.4rem;
+  line-height: 1.5;
+  text-align: justify;
+  text-transform: uppercase;
+  max-width: 45rem;
+  margin: 6rem auto 12rem; }
+
+#kits {
+  padding-left: 0;
+  padding-right: 0; }
+  #kits .kit {
+    position: relative;
+    margin-top: 10rem;
+    min-height: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: visible;
+    overflow: hidden;
+    *zoom: 1; }
+    #kits .kit .image, #kits .kit .details {
+      vertical-align: top; }
+    #kits .kit:nth-child(even) .details {
+      right: 50%; }
+    #kits .kit:nth-child(even) .image {
+      left: 60%;
+      text-align: right; }
+      #kits .kit:nth-child(even) .image img {
+        right: 8rem; }
+    #kits .kit:nth-child(odd) .details {
+      left: 50%; }
+    #kits .kit:nth-child(odd) .image {
+      right: 60%;
+      text-align: left; }
+      #kits .kit:nth-child(odd) .image img {
+        left: 8rem; }
+    #kits .kit .image {
+      position: absolute;
+      top: 0; }
+      #kits .kit .image img {
+        position: relative; }
+    #kits .kit .details {
+      position: absolute;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+      max-width: 28rem;
+      text-align: justify;
+      z-index: 100; }
+      #kits .kit .details h1 {
+        border-top: 2px dashed black;
+        padding-top: 5rem; }
+      #kits .kit .details li.size-cm,
+      #kits .kit .details li.tools,
+      #kits .kit .details li.contents {
+        margin-top: 1.5em; }
+      #kits .kit .details ul.stats li {
+        color: #444; }
+        #kits .kit .details ul.stats li .name {
+          color: black;
+          margin-right: 0.3em; }
+          #kits .kit .details ul.stats li .name:after {
+            content: ': '; }
+      #kits .kit .details .links {
+        margin-top: 3rem; }
+        #kits .kit .details .links a {
+          text-transform: uppercase; }
+
+/*# sourceMappingURL=default.css.map */

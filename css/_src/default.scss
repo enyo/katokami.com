@@ -1,0 +1,148 @@
+@import "compass";
+@import "compass/reset";
+
+
+
+// Includes all generic element definitions
+// like pargraphs, links, etc...
+@import "general.scss";
+
+
+
+
+//
+// Specific elements
+//
+
+
+
+
+// The big header image
+h1#katokami {
+  @include replace-text('header.jpg');
+  height: 40rem;
+
+  @include background-size(cover);
+  background-position: center;
+}
+
+
+
+// The first intro paragraph
+p#intro {
+  font-size: 1.4rem;
+  line-height: 1.5;
+  text-align: justify;
+  text-transform: uppercase;
+  max-width: 45rem;
+  margin: 6rem auto 12rem;
+}
+
+
+// The kits
+#kits {
+  padding-left: 0;
+  padding-right: 0;
+
+  .kit {
+
+    position: relative;
+    margin-top: 10rem;
+
+
+    .image, .details {
+      vertical-align: top;
+    }
+
+    // To account for the image.
+    min-height: 900px;
+
+    margin-left: auto;
+    margin-right: auto;
+    overflow: visible;
+
+
+    &:nth-child(even) {
+      .details {
+        right: 50%;
+      }
+      .image {
+        left: 60%;
+        text-align: right;
+        img {
+          right: 8rem;
+        }
+      }
+    }
+    &:nth-child(odd) {
+      .details {
+        left: 50%;
+      }
+      .image {
+        right: 60%;
+        text-align: left;
+        img {
+          left: 8rem;
+        }
+      }
+    }
+
+
+
+    .image {
+      position: absolute;
+      top: 0;
+      img {
+        position: relative;
+      }
+    }
+
+    .details {
+      position: absolute;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+      max-width: 28rem;
+
+      text-align: justify;
+
+      // Make sure the text is over the image.
+      z-index: 100;
+
+      h1 {
+        border-top: 2px dashed black;
+        padding-top: 5rem;
+      }
+
+      li.size-cm,
+      li.tools,
+      li.contents {
+        margin-top: 1.5em;
+      }
+
+      ul.stats {
+        li {
+          color: #444;
+          .name {
+            color: black;
+            &:after {
+              content: ': ';
+            }
+            margin-right: 0.3em;
+          }
+        }
+      }
+
+      .links {
+        margin-top: 3rem;
+        a {
+          text-transform: uppercase;
+        }
+      }
+
+    }
+
+    @include clearfix;
+
+  }
+
+}

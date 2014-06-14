@@ -1,3 +1,6 @@
+---
+---
+
 <!DOCTYPE html>
 
 <meta charset="utf-8">
@@ -5,63 +8,54 @@
 <title>katokami</title>
 
 <meta name="description" content="Katokami – Unique Papercraft Creations" />
+<meta name="keywords" content="katokami,papercraft,zapper,handicraft,handicraft work">
 
-<style type="text/css">
-
-  * {
-    box-sizing: border-box;
-  }
-
-  body, html {
-    height: 100%;
-  }
-
-  body {
-    padding: 0;
-    background: url("./bg_tile.png") repeat center center;
-    font-size: 20px;
-    color: #42342C;
-    font-family: "Helvetica Neue", tahoma, arial;
-    font-weight: 300;
-  }
-  a {
-    color: #42342C;
-    font-weight: 400;
-    text-decoration: none;
-  }
-
-  #container {
-    text-align: justify;
-    padding: 100px 10px;
-    width: 470px;
-    margin: 0 auto;
-  }
-
-  #container h1 {
-    text-indent: 100%;
-    overflow: hidden;
-    width: 450px;   
-    height: 450px;   
-    margin: 0px 0 80px 0;
-    display: inline-block;
-    background: url("./logo.png") no-repeat center center;
-  }
-
-</style>
+<link rel="icon" type="image/png" href="/favicon.png">
 
 
-<div id="container">
+<!-- Make sure that the website is at normal scale on mobile devices. -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <h1>Katokami</h1>
-
-  <p>The main web page of katokami.com is still under construction and will be accessible soon. In the meantime, please refer to the facebook page for more information.</p>
-
-  <a href="https://www.facebook.com/KatokamiPapercraft">www.facebook.com/KatokamiPapercraft</a>
-
-  <p>
-    You can already order online at <a href="https://www.etsy.com/shop/katokami">our etsy store</a>.
-  </p>
+<link href='http://fonts.googleapis.com/css?family=Muli:300,400' rel='stylesheet' type='text/css'>
+<link href="/css/default.css" rel="stylesheet" type="text/css">
 
 
-</div>
+<h1 id="katokami">Katokami</h1>
 
+<p id="intro">
+  Do it yourself is the basic idea behind the KATOKAMI label.
+  KATOKAMI papercraft kits are unique in their distinctive 'polygonal' look
+  and the fun and easy assembly.
+  Pre-cut and engraved sheets of paper reduce the time needed for putting a
+  model together and help to capture the essence of paper crafting: the joy
+  of creating something with your own hands.
+</p>
+
+
+<section id="kits">
+
+  <!-- The files are in _includes/ -->
+  {% include kit-pot-flower-purple.html %}
+
+  {% include kit-pot-flower-red.html %}
+
+  {% include kit-cctv-camera.html %}
+
+  {% include kit-zapper-orange.html %}
+
+  {% include kit-zapper-gray.html %}
+
+
+</section>
+
+
+
+
+
+<p>The main web page of katokami.com is still under construction and will be accessible soon. In the meantime, please refer to the facebook page for more information.</p>
+
+<a href="https://www.facebook.com/KatokamiPapercraft">www.facebook.com/KatokamiPapercraft</a>
+
+<p>
+  You can already order online at <a href="https://www.etsy.com/shop/katokami">our etsy store</a>.
+</p>
