@@ -157,4 +157,45 @@ p#intro {
         #kits .kit .details .links a {
           text-transform: uppercase; }
 
+#about {
+  padding: 0;
+  margin-top: 6rem; }
+  #about .separator {
+    width: 100%;
+    overflow: hidden;
+    *zoom: 1; }
+    #about .separator .cell {
+      float: left;
+      width: 25%; }
+      #about .separator .cell img {
+        display: block;
+        width: 100%; }
+  #about section {
+    overflow: hidden;
+    *zoom: 1; }
+    #about section .text {
+      padding: 3rem;
+      width: 50%; }
+    #about section:after {
+      content: "";
+      width: 50%;
+      padding-bottom: 50%;
+      background: #ddd;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      -webkit-background-size: cover;
+      background-size: cover; }
+    #about section:nth-child(even) .text {
+      float: left; }
+    #about section:nth-child(even):after {
+      float: right; }
+    #about section:nth-child(odd) .text {
+      float: right; }
+    #about section:nth-child(odd):after {
+      float: left; }
+  #about .about-katokami:after {
+    background-image: url('/image/about/about_pulpo.jpg?1402757738'); }
+  #about .about-katokami-continued:after {
+    background-image: url('/image/about/about_workplace.jpg?1401444048'); }
+
 /*# sourceMappingURL=default.css.map */

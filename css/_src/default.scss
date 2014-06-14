@@ -39,6 +39,7 @@ p#intro {
 }
 
 
+
 // The kits
 #kits {
   padding-left: 0;
@@ -145,4 +146,69 @@ p#intro {
 
   }
 
+}
+
+
+
+
+// About
+
+#about {
+  padding: 0;
+  margin-top: 6rem;
+  .separator {
+    .cell {
+      float: left;
+      width: 25%;
+      img {
+        display: block;
+        width: 100%;
+      }
+    }
+    width: 100%;
+    @include clearfix;
+  }
+  
+  section {
+    .text {
+      padding: 3rem;
+      width: 50%;
+    }
+    &:after {
+      content: "";
+      width: 50%;
+      padding-bottom: 50%;
+      background: #ddd;
+      @include background-size(cover);
+    }
+    @include clearfix;
+    
+    &:nth-child(even) {
+      .text {
+        float: left;
+      }
+      &:after {
+        float: right;
+      }
+    }
+    &:nth-child(odd) {
+      .text {
+        float: right;
+      }
+      &:after {
+        float: left;
+      }
+    }
+  }
+
+  .about-katokami {
+    &:after {
+      background-image: image-url('about/about_pulpo.jpg');
+    }
+  }
+  .about-katokami-continued {
+    &:after {
+      background-image: image-url('about/about_workplace.jpg');
+    }
+  }
 }
