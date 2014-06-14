@@ -55,7 +55,8 @@ body {
   font-family: 'Muli', sans-serif;
   font-size: 18px;
   font-weight: 300;
-  line-height: 1.5em; }
+  line-height: 1.5em;
+  min-width: 900px; }
   body > * {
     padding-left: 1.5rem;
     padding-right: 1.5rem; }
@@ -157,26 +158,29 @@ p#intro {
         #kits .kit .details .links a {
           text-transform: uppercase; }
 
-#about {
-  padding: 0;
-  margin-top: 6rem; }
-  #about .separator {
+#about, #help {
+  padding: 0; }
+  #about .separator, #help .separator {
     width: 100%;
     overflow: hidden;
     *zoom: 1; }
-    #about .separator .cell {
+    #about .separator .cell, #help .separator .cell {
       float: left;
       width: 25%; }
-      #about .separator .cell img {
+      #about .separator .cell img, #help .separator .cell img {
         display: block;
         width: 100%; }
-  #about section {
+  #about section, #help section {
     overflow: hidden;
     *zoom: 1; }
-    #about section .text {
+    #about section .text, #help section .text {
       padding: 3rem;
       width: 50%; }
-    #about section:after {
+      #about section .text *:first-child, #help section .text *:first-child {
+        margin-top: 0; }
+      #about section .text *:last-child, #help section .text *:last-child {
+        margin-bottom: 0; }
+    #about section:after, #help section:after {
       content: "";
       width: 50%;
       padding-bottom: 50%;
@@ -185,17 +189,34 @@ p#intro {
       -o-background-size: cover;
       -webkit-background-size: cover;
       background-size: cover; }
-    #about section:nth-child(even) .text {
+    #about section:nth-child(even) .text, #help section:nth-child(even) .text {
       float: left; }
-    #about section:nth-child(even):after {
+    #about section:nth-child(even):after, #help section:nth-child(even):after {
       float: right; }
-    #about section:nth-child(odd) .text {
+    #about section:nth-child(odd) .text, #help section:nth-child(odd) .text {
       float: right; }
-    #about section:nth-child(odd):after {
+    #about section:nth-child(odd):after, #help section:nth-child(odd):after {
       float: left; }
+
+#about {
+  margin-top: 6rem; }
   #about .about-katokami:after {
     background-image: url('/image/about/about_pulpo.jpg?1402757738'); }
   #about .about-katokami-continued:after {
     background-image: url('/image/about/about_workplace.jpg?1401444048'); }
+
+#help ul li:before {
+  content: "- ";
+  margin-right: 0.3em; }
+#help .links {
+  margin-top: 3rem; }
+  #help .links a {
+    text-transform: uppercase; }
+#help .basics:after {
+  background-image: url('/image/help/training_basics.jpg?1401440654'); }
+#help .advanced:after {
+  background-image: url('/image/help/training_advanced.jpg?1401440642'); }
+#help .repairs:after {
+  background-image: url('/image/help/training_repairs.jpg?1401440626'); }
 
 /*# sourceMappingURL=default.css.map */

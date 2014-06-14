@@ -151,11 +151,10 @@ p#intro {
 
 
 
-// About
+// About and help
 
-#about {
+#about, #help {
   padding: 0;
-  margin-top: 6rem;
   .separator {
     .cell {
       float: left;
@@ -173,6 +172,12 @@ p#intro {
     .text {
       padding: 3rem;
       width: 50%;
+      *:first-child {
+        margin-top: 0;
+      }
+      *:last-child {
+        margin-bottom: 0;
+      }
     }
     &:after {
       content: "";
@@ -200,6 +205,12 @@ p#intro {
       }
     }
   }
+}
+
+
+// About
+#about {
+  margin-top: 6rem;
 
   .about-katokami {
     &:after {
@@ -211,4 +222,43 @@ p#intro {
       background-image: image-url('about/about_workplace.jpg');
     }
   }
+  
 }
+
+// Help
+#help {
+
+  ul {
+    li {
+      &:before {
+        content: "- ";
+        margin-right: 0.3em;
+      }
+    }
+  }
+  
+  .links {
+    margin-top: 3rem;
+    a {
+      text-transform: uppercase;
+    }
+  }
+
+  .basics {
+    &:after {
+      background-image: image-url('help/training_basics.jpg');
+    }
+  }
+  .advanced {
+    &:after {
+      background-image: image-url('help/training_advanced.jpg');
+    }
+  }
+  .repairs {
+    &:after {
+      background-image: image-url('help/training_repairs.jpg');
+    }
+  }
+  
+}
+
