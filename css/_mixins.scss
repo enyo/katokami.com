@@ -1,12 +1,7 @@
 @mixin replace-text($img, $x: 50%, $y: 50%) {
   @include hide-text;
   background: {
-    @if is-url($img) {
-      image: $img;
-    }
-    @else {
-      image: image-url($img);
-    }
+    image: $img;
     repeat: no-repeat;
     position: $x $y;
   };
