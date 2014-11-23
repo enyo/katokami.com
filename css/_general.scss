@@ -2,10 +2,13 @@
 // General definitions
 //
 
+@import "_reset";
+@import "_mixins";
+
 
 // Defining the box sizing for all elemens
 *, *:before, *:after {
-  @include box-sizing(border-box);
+  box-sizing: border-box;
 }
 
 

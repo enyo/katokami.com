@@ -1,11 +1,12 @@
-@import "compass";
-@import "compass/reset";
+---
+---
 
 
 
 // Includes all generic element definitions
 // like pargraphs, links, etc...
-@import "general.scss";
+@import "_general";
+@import "_mixins";
 
 
 
@@ -19,10 +20,10 @@
 
 // The big header image
 h1#katokami {
-  @include replace-text('header.jpg');
+  @include replace-text(url('../image/header.jpg'));
   height: 40rem;
 
-  @include background-size(cover);
+  background-size: cover;
   background-position: center;
   margin-bottom: 1rem;
 }
@@ -241,7 +242,7 @@ p#intro {
       content: "";
       width: 50%;
       background: #ddd;
-      @include background-size(cover);
+      background-size: cover;
       background-position: center;
     }
     @include clearfix;
@@ -313,12 +314,12 @@ p#intro {
 
   .about-katokami {
     &:after {
-      background-image: image-url('about/about_pulpo.jpg');
+      background-image: url('../image/about/about_pulpo.jpg');
     }
   }
   .about-katokami-continued {
     &:after {
-      background-image: image-url('about/about_workplace.jpg');
+      background-image: url('../image/about/about_workplace.jpg');
     }
   }
   
@@ -345,17 +346,17 @@ p#intro {
 
   .basics {
     &:after {
-      background-image: image-url('help/training_basics.jpg');
+      background-image: url('../image/help/training_basics.jpg');
     }
   }
   .advanced {
     &:after {
-      background-image: image-url('help/training_advanced.jpg');
+      background-image: url('../image/help/training_advanced.jpg');
     }
   }
   .repairs {
     &:after {
-      background-image: image-url('help/training_repairs.jpg');
+      background-image: url('../image/help/training_repairs.jpg');
     }
   }
   
