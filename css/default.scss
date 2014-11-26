@@ -199,6 +199,9 @@ p#intro {
 
     }
 
+    &.moustache .image { top: 2rem; }
+    &.gelati .image { top: 4rem; }
+
     @include clearfix;
 
   }
