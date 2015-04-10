@@ -25,6 +25,18 @@ h1#katokami {
   background-size: cover;
   background-position: center;
   margin-bottom: 1rem;
+  position: relative;
+
+  &:after {
+    content: '';
+    width: 370px;
+    height: 370px;
+    position: absolute;
+    bottom: 140px;
+    left: 50%;
+    margin-left: -(370px/2);
+    background: url('../image/header_logo.png') no-repeat center center;
+  }
 }
 
 
