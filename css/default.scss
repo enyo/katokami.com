@@ -134,10 +134,10 @@ p#intro {
 
     &:nth-child(even) {
       .details {
-        right: 30%;
+        right: 50%;
       }
       .image {
-        left: 80%;
+        left: 60%;
         text-align: right;
         img {
           right: 8rem;
@@ -146,10 +146,10 @@ p#intro {
     }
     &:nth-child(odd) {
       .details {
-        left: 30%;
+        left: 50%;
       }
       .image {
-        right: 80%;
+        right: 60%;
         text-align: left;
         img {
           left: 8rem;
