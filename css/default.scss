@@ -117,7 +117,7 @@ p#intro {
   .kit {
 
     position: relative;
-    margin-top: 1rem;
+    margin-top: 10rem;
 
 
     .image, .details {
@@ -134,10 +134,10 @@ p#intro {
 
     &:nth-child(even) {
       .details {
-        right: 50%;
+        right: 30%;
       }
       .image {
-        left: 60%;
+        left: 80%;
         text-align: right;
         img {
           right: 8rem;
@@ -146,10 +146,10 @@ p#intro {
     }
     &:nth-child(odd) {
       .details {
-        left: 50%;
+        left: 30%;
       }
       .image {
-        right: 60%;
+        right: 80%;
         text-align: left;
         img {
           left: 8rem;
