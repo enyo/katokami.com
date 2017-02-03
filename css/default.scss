@@ -68,7 +68,7 @@ h1#katokami {
 
   a {
     background: none;
-    color: black;
+    color: #808080;
     text-transform: uppercase;
     display: inline-block;
     line-height: 2em;
@@ -78,15 +78,20 @@ h1#katokami {
     span {
       display: none;
     }
+
+    &:hover {
+      color: black;
+    }
   }
 
-  i {
+  svg {
     position: relative;
-    top: 2px;
-    color: #808080;
-    font-size: 2rem;
+    color: inherit;
     line-height: 1.5rem;
     vertical-align: middle;
+    width: 1.2em;
+    height: 1.2em;
+    bottom: 0.1em;
   }
 
 }
@@ -135,7 +140,7 @@ h1#katokami {
     padding: 1.5rem 1.5rem 4.5rem;
 
     h1 {
-      margin: 0 0 3rem;
+      margin: 0 0 1.5rem;
       font-size: 1.3em;
     }
 
@@ -146,11 +151,18 @@ h1#katokami {
     .links {
       margin-top: 3rem;
       a {
+        position: relative;
         text-transform: uppercase;
         text-decoration: none;
         display: inline-block;
         background: $links-bg-color;
         color: $links-txt-color;
+        &:hover {
+          background: $links-hover-bg-color;
+        }
+        &:active {
+          top: 1px;
+        }
         padding: 0 0.4em;
 
         &:not(:last-of-type) {
@@ -200,6 +212,9 @@ h1#katokami {
     font-size: 1.2rem;
     .details {
       padding: 3rem 3rem 6rem;
+      h1 {
+        margin: 0 0 3rem;
+      }
     }
   }
 }
