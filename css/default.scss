@@ -186,9 +186,12 @@ h1#katokami {
 }
 
 
-@media (min-width: 600px) {
+@media (min-width: 610px) {
   h1#katokami {
     height: 20rem;
+  }
+  #main-nav {
+    font-size: 1.2rem;
   }
   #intro {
     font-size: 1.2rem;
@@ -255,6 +258,9 @@ h1#katokami {
 }
 
 @media (min-width: 1000px) {
+  #main-nav {
+    font-size: 1.4rem;
+  }
   #intro {
     padding: 6rem 1.5rem 9rem;
     font-size: 1.6rem;
