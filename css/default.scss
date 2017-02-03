@@ -45,7 +45,7 @@ h1#katokami {
 // Navigation
 #main-nav {
   background: #fff;
-  top: 0px;
+  top: 0;
   position: -webkit-sticky;
   position: -moz-sticky;
   position: -ms-sticky;
@@ -62,7 +62,7 @@ h1#katokami {
 
   li.social {
     a {
-      padding: 0.0.5em;
+      padding: 0.5em;
     }
     &.facebook {
       padding-left: 2em;
@@ -76,6 +76,7 @@ h1#katokami {
     display: inline-block;
     line-height: 2em;
     padding: 0 1em;
+    text-decoration: none;
     
     span {
       display: none;
@@ -99,280 +100,115 @@ h1#katokami {
 
 // The first intro paragraph
 p#intro {
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   line-height: 1.5;
   text-align: justify;
   text-transform: uppercase;
-  max-width: 45rem;
-  margin: 6rem auto 12rem;
+  max-width: 49rem;
+  margin: 6rem auto 9rem;
+  border: 1px solid white;
+  padding: 1.3em 1.6em;
 }
-
 
 
 // The kits
 #kits {
+  background: $kits-bg-color;
+  font-size: 1.5rem;
+  line-height: 150%;
   padding-left: 0;
   padding-right: 0;
-
-  .kit {
-
-    position: relative;
-    margin-top: 10rem;
-
-
-    .image, .details {
-      vertical-align: top;
-    }
-
-    // To account for the image.
-    min-height: 900px;
-
-    margin-left: auto;
-    margin-right: auto;
-    overflow: visible;
-
-
-    &:nth-child(even) {
-      .details {
-        right: 50%;
-      }
-      .image {
-        left: 60%;
-        text-align: right;
-        img {
-          right: 8rem;
-        }
-      }
-    }
-    &:nth-child(odd) {
-      .details {
-        left: 50%;
-      }
-      .image {
-        right: 60%;
-        text-align: left;
-        img {
-          left: 8rem;
-        }
-      }
-    }
-
-
-
-    .image {
-      position: absolute;
-      top: 0;
-      img {
-        position: relative;
-      }
-    }
-
-    .details {
-      position: absolute;
-      padding-left: 1.5rem;
-      padding-right: 1.5rem;
-      max-width: 28rem;
-
-      text-align: justify;
-
-      // Make sure the text is over the image.
-      z-index: 100;
-
-      h1 {
-        border-top: 2px dashed black;
-        padding-top: 5rem;
-      }
-
-      li.size-cm,
-      li.tools,
-      li.contents {
-        margin-top: 1.5em;
-      }
-
-      ul.stats {
-        li {
-          color: #444;
-          .name {
-            color: black;
-            &:after {
-              content: ': ';
-            }
-            margin-right: 0.3em;
-          }
-        }
-      }
-
-      .links {
-        margin-top: 3rem;
-        a {
-          text-transform: uppercase;
-        }
-      }
-
-    }
-
-    &.moustache .image { top: 2rem; }
-    &.gelati .image { top: 4rem; }
-
-    @include clearfix;
-
-  }
-
 }
 
 
+// Left/Right split of image and content
+.kit, .side-by-side {
+  position: relative;
+  display: flex;
+
+  .image, .details {
+    flex: 50%;
+  }
+
+  .image {
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .details {
+    padding: 3rem;
+    text-align: right;
+
+    h1 {
+      margin: 0 0 3rem;
+      font-size: 1.3em;
+    }
+
+    .description {
+      text-align: justify;
+    }
+
+    .links {
+      margin-top: 3rem;
+      a {
+        text-transform: uppercase;
+        text-decoration: none;
+        display: inline-block;
+        background: $links-bg-color;
+        color: $links-txt-color;
+        padding: 0 0.4em;
+
+        &:not(:last-of-type) {
+          margin-right: 1em;
+        }
+      }
+    }
+  }
+
+  &:nth-of-type(even), &.image-left {
+    .details {
+      order: 2;
+      text-align: left;
+    }
+    .image {
+      order: 1;
+    }
+    .links a {
+      &:not(:first-of-type) {
+        margin-left: 1em;
+      }
+      &:not(:last-of-type) {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.kit {
+  min-height: 800px;
+}
 
 
 // About and help
 
-#about, #help {
-  padding: 0;
-  .separator {
-    .cell {
-      float: left;
-      width: 25%;
-      img {
-        display: block;
-        width: 100%;
-      }
-    }
-    width: 100%;
-    @include clearfix;
-  }
-  
-  section {
-    position: relative;
-    .text {
-      padding: 3rem;
-      width: 50%;
-      *:first-child {
-        margin-top: 0;
-      }
-      *:last-child {
-        margin-bottom: 0;
-      }
-    }
-    &:after {
-      content: "";
-      width: 50%;
-      background: #ddd;
-      background-size: cover;
-      background-position: center;
-    }
-    @include clearfix;
-
-    &:nth-child(even) {
-      .text {
-        float: left;
-      }
-    }
-    &:nth-child(odd) {
-      .text {
-        float: right;
-      }
-    }
-
-  }
+#about {
+  background: $about-bg-color;
 }
+#help {
+  background: $help-bg-color;
+}
+
 
 @media (min-width: 1266px) {
   #about, #help {
-    section {
-      &:after {
-        padding-bottom: 50%;
-      }
-      &:nth-child(even) {
-        &:after {
-          float: right;
-        }
-      }
-      &:nth-child(odd) {
-        &:after {
-          float: left;
-        }
-      }
-    }
   }
 }
 
 @media (max-width: 1266px) {
   #about, #help {
-    section {
-      &:nth-child(even) {
-        &:after {
-          position: absolute;
-          right: 0;
-          top: 0;
-          left: 50%;
-          bottom: 0;
-        }
-      }
-      &:nth-child(odd) {
-        &:after {
-          position: absolute;
-          left: 0;
-          top: 0;
-          right: 50%;
-          bottom: 0;
-        }
-      }
-    }
   }
-}
-
-
-
-// About
-#about {
-  margin-top: 6rem;
-
-  .about-katokami {
-    &:after {
-      background-image: url('../image/about/about_pulpo.jpg');
-    }
-  }
-  .about-katokami-continued {
-    &:after {
-      background-image: url('../image/about/about_workplace.jpg');
-    }
-  }
-  
-}
-
-// Help
-#help {
-
-  ul {
-    li {
-      &:before {
-        content: "- ";
-        margin-right: 0.3em;
-      }
-    }
-  }
-  
-  .links {
-    margin-top: 3rem;
-    a {
-      text-transform: uppercase;
-    }
-  }
-
-  .basics {
-    &:after {
-      background-image: url('../image/help/training_basics.jpg');
-    }
-  }
-  .advanced {
-    &:after {
-      background-image: url('../image/help/training_advanced.jpg');
-    }
-  }
-  .repairs {
-    &:after {
-      background-image: url('../image/help/training_repairs.jpg');
-    }
-  }
-  
 }
 

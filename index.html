@@ -54,10 +54,7 @@
 
 <section id="kits">
 
-  <!-- The files are in _posts/ -->
-  {% for post in site.posts %}{% if post.invisible != true %}
-    {{ post.content }}
-  {% endif %}{% endfor %}
+  {% include kits.html %}
 
 </section>
 
@@ -65,64 +62,50 @@
 
 <section id="about">
 
-  <div class="separator">
-    <div class="cell"><img src="/image/about/seperator1.jpg" alt=""></div>
-    <div class="cell"><img src="/image/about/seperator2.jpg" alt=""></div>
-    <div class="cell"><img src="/image/about/seperator3.jpg" alt=""></div>
-    <div class="cell"><img src="/image/about/seperator4.jpg" alt=""></div>
-  </div>
-
-
-  <section class="about-katokami">
-    <div class="text">
+  <section class="about-katokami side-by-side">
+    <div class="details">
       <h1>About Katokami</h1>
 
       <p>
-        My Name is Alexander Kvasnicka, a Vienna based digital artist. I see myself
-        as part of the maker culture and therefore strive to bring digital creations
-        to life so that they can be touched and manipulated with your own hands. I
-        started to create selfmade papercraft designs a while ago. Soon I came to
-        realize that I want to bring back this wonderful crafting experience that up
-        to this point was only a long lost childhood memory.
+        The team behind Katokami is based in Vienna, Austria and consists of only two people. Alex is the founder and
+        creative head of Katokami while Claudia is responsible for marketing and communciations.
       </p>
 
       <p>
-        With the help of newly available digital and practical manufacturing tools I
-        worked hard to start Katokami. Not only to recreate that particular
-        experience but also to enhance it in numerous of ways. And I’m very happy
-        that after hundreds of hours of experimenting and refining I eventually can
-        call the Katokami papercraft kits a success. Apart from being beautiful to
-        look at they are fun and easy to assemble as well.
+        Alex started to create selfmade papercraft designs a while back because he looked for a way to bring digital
+        3D-designs to life. He soon fell back in love with an almost forgotten crafting technique he last experienced
+        as a child in the late 1980ies. Its called paper crafting.
       </p>
+
+      <p>
+        His early designs were such a success that he went on and founded his own papercraft label Katokami in 2013.
+        His goal was not only to recreate the particular crafting experience of his childhood but to enhance it in
+        numerous ways to make it attractive and accessible to a modern audience.
+      </p>
+    </div>
+    <div class="image">
+      <img src="image/about/about_team.jpg"/>
     </div>
   </section>
 
-  <section class="about-katokami-continued">
-    <div class="text">
+  <section class="about-katokami-continued side-by-side image-left">
+    <div class="details">
+
       <p>
-        The unique style of Katokami originates from the exclusive use of
-        single-colored sheets of paper. These handpicked, high quality sheets from
-        renowned Italian paper mill Fabriano provide long lasting, vibrant colors,
-        stability as well as formability. The resulting play of form and color
-        gives Katokami models their typical appearance.
+        The word Katokami is Japanese and (roughly) translates to “cut paper”. The name and overall style of Katokami
+        is inspired by Asian paper culture, like Origami and Kirigami for example. Simple, reduced shapes and modest
+        use of color are main characteristics. Like with Origami, the central idea behind Katokami is the
+        do-it-yourself spirit. “The way is the goal” so to speak.
       </p>
 
       <p>
-        Also, Katokami's kits are as easy and straightforward to assemble as it
-        gets. Usually you would have to cut out and fold every single part of the
-        model by hand and then put them together according to tiny numbers printed
-        on them. It's tedious, sometimes confusing and not very pretty. In
-        contrast, Katokami provides pre-cut and engraved sheets of paper that make
-        crafting way more effortless and enjoyable. Detailed instruction manuals
-        show you step-by-step how to assemble the model of your choice. It helps
-        you to get a feel for the paper, the glue and the assembling process in
-        general. It's easy!
+        Katokamis papercraft kits come in different forms, sizes and colors. You have the choice between paper flowers,
+        animals, masks, toys as well as street art and videogame inspired designs. Always included are detailed
+        instruction manuals that show you step-by-step how to assemble the kit of your choice. It's easy!
       </p>
-
-      <p>
-        I wish you happy crafting, Alex
-      </p>
-
+    </div>
+    <div class="image">
+      <img src="image/about/about_workplace.jpg" height="600" width="600"/>
     </div>
   </section>
 
@@ -132,16 +115,8 @@
 
 <section id="help">
 
-  <div class="separator">
-    <div class="cell"><img src="/image/help/seperator1.jpg" alt=""></div>
-    <div class="cell"><img src="/image/help/seperator2.jpg" alt=""></div>
-    <div class="cell"><img src="/image/help/seperator3.jpg" alt=""></div>
-    <div class="cell"><img src="/image/help/seperator4.jpg" alt=""></div>
-  </div>
-
-
-  <section class="basics">
-    <div class="text">
+  <section class="basics side-by-side">
+    <div class="details">
       <h1>TRAINING VIDEO ONE<br>THE BASICS</h1>
 
       <p>
@@ -162,11 +137,16 @@
         <a target="_blank" href="http://vimeo.com/95430853">Watch</a>
       </div>
     </div>
+
+    <div class="image">
+      <img src="image/help/training_basics.jpg"/>
+    </div>
+
   </section>
 
 
-  <section class="advanced">
-    <div class="text">
+  <section class="advanced side-by-side">
+    <div class="details">
       <h1>TRAINING VIDEO TWO<br>ADVANCED TIPS</h1>
 
       <p>
@@ -189,10 +169,14 @@
         <a target="_blank" href="http://vimeo.com/95430854">Watch</a>
       </div>
     </div>
+
+    <div class="image">
+      <img src="image/help/training_advanced.jpg"/>
+    </div>
   </section>
 
-  <section class="repairs">
-    <div class="text">
+  <section class="repairs side-by-side">
+    <div class="details">
       <h1>TRAINING VIDEO THREE<br>REPAIRS</h1>
 
       <p>
@@ -203,6 +187,11 @@
         <a target="_blank" href="http://vimeo.com/95430855">Watch</a>
       </div>
     </div>
+
+    <div class="image">
+      <img src="image/help/training_repairs.jpg"/>
+    </div>
+
   </section>
 
 </section>

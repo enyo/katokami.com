@@ -4,6 +4,7 @@
 
 @import "_reset";
 @import "_mixins";
+@import "_settings";
 
 
 // Defining the box sizing for all elemens
@@ -16,26 +17,15 @@
 // most elements
 body {
   padding: 0;
-  background: #EAE8E7;
-  color: #000;
+  background: #685c78;
+  color: white;
   font-family: 'Muli', sans-serif;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 300;
   line-height: 1.5em;
 
-
-  > * {
-    // All elements at the top level have
-    // a horizontal padding so they have a
-    // nice spacing to the window border.
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
-  
   min-width: 900px;
 }
-
-
 
 
 
@@ -50,12 +40,9 @@ h1 {
 
 
 // Links
-a {
-  display: inline-block;
-  text-decoration: none;
-  background: black;
-  color: white;
-  padding: 0 0.4em;
+a, a:hover, a:visited {
+  color: inherit;
+  text-decoration: underline;
 }
 
 
