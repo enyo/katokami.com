@@ -316,8 +316,9 @@ h1#katokami {
   }
 }
 
-@media (max-width: 1266px) {
-  #about, #help {
+@media (min-width: 1400px) {
+  .kit, .side-by-side {
+    min-height: 50rem;
   }
 }
 
